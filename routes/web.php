@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ReguController;
 use App\Models\Regu;
 use Illuminate\Support\Facades\Route;
 
@@ -26,12 +27,7 @@ Route::get('/about', function () {
     ]);
 });
 
-Route::get('/teams', function () {
-    return view('teams', [
-        "title" => "Teams",
-        "teams" => Regu::all()
-    ]);
-});
+Route::get('/teams', [ReguController::class, 'index']);
 
 Route::get('/login', function () {
     return view('login', [

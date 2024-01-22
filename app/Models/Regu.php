@@ -29,6 +29,6 @@ class Regu
 
     public static function All()
     {
-        return self::$teams;
+        return collect(self::$teams);
     }
 }
