@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Regu;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +16,25 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home', [
-        "testVariable" => "hello",
-        "testVariable2" => "hello2"
+        "title" => "Home"
+    ]);
+});
+
+Route::get('/about', function () {
+    return view('about', [
+        "title" => "About"
+    ]);
+});
+
+Route::get('/teams', function () {
+    return view('teams', [
+        "title" => "Teams",
+        "teams" => Regu::all()
+    ]);
+});
+
+Route::get('/login', function () {
+    return view('login', [
+        "title" => "Log In"
     ]);
 });
