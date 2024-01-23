@@ -12,14 +12,19 @@
         </tr>
         @foreach ($teams as $team)
             <tr>
-                <td>{{ $team['regu'] }}</td>
+                <td>{{ $team->nama }}</td>
                 <td>
-                    @foreach ($team['anggota'] as $anggota)
-                        {{ $anggota }}<br>
+                    @foreach ($anggota as $a)
+                        @if ($team->id == $a->regus_id)
+                            {{ $a->nama }} ({{ $a->nisn }})<br>
+                        @endif
                     @endforeach
                 </td>
-                <td>{{ $team['soal'] }}/20</td>
-                <td>{{ $team['skor'] }}/100</td>
+
+                {{-- 13 menit 44 detik --}}
+
+                <td>{{ $team->soal }}/20</td>
+                <td>{{ $team->skor }}/100</td>
             </tr>
         @endforeach
     </table>
