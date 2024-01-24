@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama');
             $table->string('nisn');
-            $table->integer('regus_id');
+            $table->foreignId('regus_id')->constrained('regus');
             $table->timestamps();
         });
     }

@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('nama');
             $table->integer('soal');
             $table->integer('skor');
+            $table->foreignId('users_id')->constrained('users');
             $table->timestamps();
         });
     }
