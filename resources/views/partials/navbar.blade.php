@@ -16,6 +16,8 @@
                 <li class="nav-item">
                     <a class="nav-link active" href="/teams">Teams</a>
                 </li>
+            </ul>
+            <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link active" href="/login">Log In</a>
                 </li>

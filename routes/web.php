@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ReguController;
 use App\Models\Regu;
 use Illuminate\Support\Facades\Route;
@@ -29,8 +31,7 @@ Route::get('/about', function () {
 
 Route::get('/teams', [ReguController::class, 'index']);
 
-Route::get('/login', function () {
-    return view('login', [
-        "title" => "Log In"
-    ]);
-});
+Route::get('/login', [LoginController::class, 'index']);
+
+Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'store']);
