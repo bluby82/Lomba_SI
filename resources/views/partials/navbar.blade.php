@@ -11,7 +11,7 @@
                     <a class="nav-link active" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="/about">About Us</a>
+                    <a class="nav-link active" href="/competition">Competition</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="/teams">Teams</a>
@@ -26,6 +26,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="/dashboard">My Dashboard</a></li>
+                            <li><a class="dropdown-item" href="/register-team">Register team</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>

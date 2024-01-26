@@ -2,7 +2,7 @@
 
 @section('container')
     <link rel="stylesheet" href="css/teams.css">
-
+    <h1>halaman untuk tunjukin skor dari para team</h1>
     <table id="tabelTeams" class="table-bordered">
         <tr>
             <th>Nama Sekolah</th>
