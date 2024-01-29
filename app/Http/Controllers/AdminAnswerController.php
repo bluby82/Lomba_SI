@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Question;
+use App\Models\Answer;
 use Illuminate\Http\Request;
 
-class AdminQuestionController extends Controller
+class AdminAnswerController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('admin.question', [
-            "questions" => Question::all()
+        return view('admin.answer', [
+            "answers" => Answer::all()
         ]);
     }
 
@@ -36,7 +36,7 @@ class AdminQuestionController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Question $question)
+    public function show(Answer $answer)
     {
         //
     }
@@ -44,7 +44,7 @@ class AdminQuestionController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Question $question)
+    public function edit(Answer $answer)
     {
         //
     }
@@ -52,7 +52,7 @@ class AdminQuestionController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Question $question)
+    public function update(Request $request, Answer $answer)
     {
         //
     }
@@ -60,7 +60,7 @@ class AdminQuestionController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Question $question)
+    public function destroy(Answer $answer)
     {
         //
     }

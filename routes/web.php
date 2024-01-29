@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\AdminAnswerController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AdminQuestionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
@@ -39,7 +42,9 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');;
 Route::post('/register', [RegisterController::class, 'store']);
 
+Route::get('/admin', function () {
+    return view('admin.index');
+})->middleware('auth');
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
-
-Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+Route::resource('/admin/question', AdminQuestionController::class)->middleware('auth');
+Route::resource('/admin/answer', AdminAnswerController::class)->middleware('auth');
