@@ -16,7 +16,7 @@
             <tbody>
                 @foreach ($questions as $question)
                     <tr>
-                        <td>{{ $loop->iteration }}</td>
+                        <td>{{ $question->id }}</td>
                         <td>{{ $question->question }}</td>
                     </tr>
                 @endforeach

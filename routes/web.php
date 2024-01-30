@@ -29,7 +29,7 @@ Route::get('/', function () {
 
 Route::get('/competition', function () {
     return view('competition', [
-        "title" => "competition"
+        "title" => "Competition"
     ]);
 });
 
